@@ -1,0 +1,20 @@
+{
+  "name": "batepapowebfinal",
+  "version": "1.0.0",
+  "description": "Bate-papo web com cadastro de usuários e envio de mensagens capturando o horário de envio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "start": "node index.js",
+    "type": "git",
+    "url": "git+https://github.com/joaovitoor01/BatePapoWebFinal.git"
+  },
+  "author": "João Vitor Santos Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaovitoor01/BatePapoWebFinal/issues"
+  },
+  "homepage": "https://github.com/joaovitoor01/BatePapoWebFinal#readme"
+}
