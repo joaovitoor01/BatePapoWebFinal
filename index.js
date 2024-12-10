@@ -29,7 +29,7 @@ function usuarioEstaAutenticado(requisicao, resposta, next){
         next();
     }
     else{
-       resposta.redirect('/login.html');
+       resposta.redirect('/publico/login.html');
     }
 }
 
@@ -148,7 +148,7 @@ function autenticaUsuario(requisicao, resposta){
 app.post('/login',autenticaUsuario);
 
 app.get('/login',(req,resp)=>{
-    resp.redirect('/login.html');
+    resp.redirect('/publico/login.html');
 });
 
 app.get('/', (requisicao,resposta)=>{
@@ -219,7 +219,7 @@ app.get('/', (requisicao,resposta)=>{
 
 app.get('/logout', (req, resp) =>{
     req.session.destroy();
-    resp.redirect('/login.html');
+    resp.redirect('/publico/login.html');
 });
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
