@@ -13,6 +13,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
 app.use(session({
     secret: 'MiNh4Ch4v3eS3cr3t4a4a',
     resave: true,
@@ -29,7 +30,7 @@ function usuarioEstaAutenticado(requisicao, resposta, next){
         next();
     }
     else{
-       resposta.redirect('/publico/login.html');
+       resposta.redirect('login.html');
     }
 }
 
@@ -148,7 +149,7 @@ function autenticaUsuario(requisicao, resposta){
 app.post('/login',autenticaUsuario);
 
 app.get('/login',(req,resp)=>{
-    resp.redirect('/publico/login.html');
+    resp.redirect('login.html');
 });
 
 app.get('/', (requisicao,resposta)=>{
@@ -219,7 +220,7 @@ app.get('/', (requisicao,resposta)=>{
 
 app.get('/logout', (req, resp) =>{
     req.session.destroy();
-    resp.redirect('/publico/login.html');
+    resp.redirect('login.html');
 });
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
