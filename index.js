@@ -12,7 +12,6 @@ let listaBatePapo = [];
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
 
 app.use(session({
     secret: 'MiNh4Ch4v3eS3cr3t4a4a',
