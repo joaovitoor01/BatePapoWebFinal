@@ -2,6 +2,9 @@ import express from 'express';
 import path from 'path';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
+import path from "path";
+
+
 
 const host = '0.0.0.0';
 const porta = 3000;
@@ -12,6 +15,7 @@ let listaBatePapo = [];
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(process.cwd(), '/publico')));
 
 app.use(session({
     secret: 'MiNh4Ch4v3eS3cr3t4a4a',
