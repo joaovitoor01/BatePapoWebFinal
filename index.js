@@ -113,7 +113,7 @@ function autenticaUsuario(requisicao, resposta){
     const senha = requisicao.body.senha;
     if (pessoa == 'admin' && senha == '123456'){
         requisicao.session.usuarioAutenticado = true;
-        resposta.cookie('dataUltimoAcesso', new Date().toLocaleString(),{
+        resposta.cookie('dataUltimoAcesso', new Date().toLocaleString('pt-br'),{
             httpOnly: true,
             maxAge: 1000 * 60 * 60 * 24 * 30
         });
@@ -340,7 +340,7 @@ app.get('/batepapo', usuarioEstaAutenticado, (req, res) => {
                     <label for="mensagem" class="form-label">Mensagem:</label>
                     <input type="text" id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem" required>
                 </div>
-                <input type="text" id="horarioMensagem" value="${new Date().toLocaleString()}" name="horarioMensagem" hidden>
+                <input type="text" id="horarioMensagem" value="${new Date().toLocaleString('pt-br')}" name="horarioMensagem" hidden>
                  <div class="col-12 button-group" style="">
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <a href="/" class="btn btn-secondary">Voltar</a>
