@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Bate-papo web com cadastro de usuários e envio de mensagens capturando o horário de envio",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "start": "node index.js",
     "type": "git",
     "url": "git+https://github.com/joaovitoor01/BatePapoWebFinal.git"
   },
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/joaovitoor01/BatePapoWebFinal/issues"
   },
-  "homepage": "https://github.com/joaovitoor01/BatePapoWebFinal#readme"
+  "homepage": "https://github.com/joaovitoor01/BatePapoWebFinal#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
 }
