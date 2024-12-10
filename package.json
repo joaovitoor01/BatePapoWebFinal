@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/joaovitoor01/BatePapoWebFinal/issues"
   },
-  "homepage": "https://github.com/joaovitoor01/BatePapoWebFinal#readme",
+  "homepage": "https://github.com/joaovitoor01/BatePapoWebFinal/index.js",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
